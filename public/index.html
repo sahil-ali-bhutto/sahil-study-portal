@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101d35"><title>Sahil Study Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main id="loginView" class="login-shell">
+    <section class="login-card">
+      <div class="brand-mark">S<span>+</span></div>
+      <p class="eyebrow">YOUR PRIVATE LEARNING SPACE</p>
+      <h1>Sahil Study<br><em>Portal</em></h1>
+      <p class="muted intro">One library for your lectures, notes, PDFs and study resources.</p>
+      <form id="loginForm" class="login-form">
+        <label for="username">Username</label><input id="username" name="username" autocomplete="username" placeholder="Enter your username" required>
+        <label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+        <button class="primary full" type="submit">Enter my library <span>→</span></button>
+        <p id="loginError" class="error" role="alert"></p>
+      </form>
+      <div class="secure-note"> <span class="lock">▣</span> Private sign-in · No email required</div>
+    </section>
+    <footer>SAHIL FAZAL MOHAMMAD BHUTTO <span>•</span> LEARN. ORGANIZE. GROW.</footer>
+  </main>
+
+  <main id="appView" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="side-brand"><div class="brand-mark small">S<span>+</span></div><div><b>Sahil Study</b><small>PERSONAL LIBRARY</small></div></div>
+      <div class="side-label">WORKSPACE</div>
+      <button class="nav active" data-filter="all"><span>▦</span> All materials</button>
+      <button class="nav" data-filter="application/pdf"><span>▤</span> PDFs & notes</button>
+      <button class="nav" data-filter="video/"><span>▷</span> Videos</button>
+      <div class="side-bottom"><div class="profile"><div class="avatar">SB</div><div><b>Sahil Ali Bhutto</b><small>Portal owner</small></div></div><button id="logoutBtn" class="logout">↪ Sign out</button></div>
+    </aside>
+    <section class="content">
+      <header class="topbar"><div><p class="eyebrow">YOUR LEARNING SPACE</p><h2>Good to see you, Sahil.</h2></div><div class="top-tag">✦ PERSONAL LIBRARY</div></header>
+      <section class="welcome"><div><p class="eyebrow light">STAY CURIOUS. KEEP BUILDING.</p><h1>Your knowledge,<br><em>all in one place.</em></h1><p>Keep every lecture, document and resource organized.</p></div><div class="welcome-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="book-icon">▤</div><span class="spark s1">✦</span><span class="spark s2">✧</span></div></section>
+      <div class="section-head"><div><p class="eyebrow">YOUR COLLECTION</p><h3>Study materials</h3></div><span id="fileCount" class="count">0 ITEMS</span></div>
+      <section class="upload-panel"><div class="upload-symbol">↑</div><div class="upload-copy"><b>Add to your library</b><p>Upload PDFs, videos, images, DOCX or text files.</p></div><div class="upload-actions"><input id="fileInput" type="file" accept=".pdf,.mp4,.webm,.mov,.jpg,.jpeg,.png,.webp,.txt,.docx" hidden><button id="chooseFile" class="primary">Choose file <span>＋</span></button></div><div id="uploadProgress" class="upload-progress hidden"></div></section>
+      <div class="filters-row"><div><button class="filter active" data-filter="all">Everything</button><button class="filter" data-filter="application/pdf">PDFs & notes</button><button class="filter" data-filter="video/">Videos</button></div><input id="searchInput" class="search" placeholder="⌕  Search your library" aria-label="Search library"></div>
+      <section id="fileGrid" class="file-grid"><div class="empty-state"><div>▤</div><b>Your study library is ready</b><p>Upload your first PDF or lecture video to get started.</p></div></section>
+      <footer class="app-footer">SAHIL FAZAL MOHAMMAD BHUTTO <span>•</span> YOUR PRIVATE STUDY SPACE</footer>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/app.js" defer></script>
+</body></html>
